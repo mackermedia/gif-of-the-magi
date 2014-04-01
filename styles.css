@@ -56,28 +56,6 @@ marquee:focus {
 	outline: none;
 }
 
-marquee:first-letter  {
-	font-family: Impact;
-	font-size: 40px;
-	text-shadow:
-	  1px 0 0 blanchedalmond,
-	  2px 0 0 blanchedalmond,
-	  3px 0 0 blanchedalmond,
-	  4px 0 0 firebrick,
-	  5px 0 0 firebrick,
-	  6px 0 0 firebrick,
-	  7px 0 0 papayawhip,
-	  8px 0 0 papayawhip,
-	  9px 0 0 papayawhip,
-	  10px 0 0 whitesmoke,
-	  11px 0 0 whitesmoke,
-	  12px 0 0 whitesmoke,
-	  13px 0 0 cadetblue,
-	  14px 0 0 cadetblue,
-	  15px 0 0 cadetblue;
-	text-transform: uppercase;
-}
-
 body:hover marquee {
 	box-shadow:
 	  1px 1px 0 blanchedalmond,
