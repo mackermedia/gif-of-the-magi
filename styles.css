@@ -1,3 +1,7 @@
+body {
+	background: black;
+}
+
 html,
 body,
 blink {
@@ -16,6 +20,20 @@ blink {
 blink {
 	background-position: 50% 50%;
 	background-size: cover;
+	transition:
+		opacity 0.3s ease-in-out,
+		-webkit-transform 0.3s ease-in-out,
+		-webkit-filter 0.3s ease-in-out;
+}
+
+body:hover blink {
+	-webkit-filter: blur(20px);
+	-webkit-transform: scale(1.6);
+	opacity: 0.45;
+	transition:
+		opacity 0.3s ease-in-out 0.2s,
+		-webkit-transform 0.3s ease-in-out 0.2s,
+		-webkit-filter 0.3s ease-in-out;
 }
 
 marquee {
