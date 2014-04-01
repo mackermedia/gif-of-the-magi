@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: gif_of_the_magi_development
+  pool: 5
+  username: postgres
+  password: postgresqlsucks
+  host: localhost
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: gif_of_the_magi_test
+  pool: 5
+  username: postgres
+  password: postgresqlsucks
+  host: localhost
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: gif_of_the_magi
+  pool: 5
+  username: postgres
+  password: postgresqlsucks
+  host: localhost
