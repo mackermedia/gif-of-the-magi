@@ -11,3 +11,78 @@
  *= require_self
  *= require_tree .
  */
+
+body {
+  background: black;
+}
+
+html,
+body,
+blink {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+marquee,
+blink {
+  display: block;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+blink {
+  background-position: 50% 50%;
+  background-size: cover;
+  transition:
+    opacity 0.3s ease-in-out,
+    -webkit-transform 0.3s ease-in-out,
+    -webkit-filter 0.3s ease-in-out;
+}
+
+marquee {
+  background: #fff;
+  border-radius: 3px;
+  bottom: 50px;
+  font-family: Papyrus;
+  font-size: 20px;
+  height: 50px;
+  line-height: 50px;
+  opacity: 0;
+  margin-top: -25px;
+  top: 51%;
+  left: 11%;
+  transition: all 0.3s ease-in-out;
+  width: 80%;
+}
+
+marquee:focus {
+  outline: none;
+}
+
+marquee:hover, marquee:focus {
+  box-shadow:
+    1px 1px 0 blanchedalmond,
+    2px 2px 0 blanchedalmond,
+    3px 3px 0 blanchedalmond,
+    4px 4px 0 firebrick,
+    5px 5px 0 firebrick,
+    6px 6px 0 firebrick,
+    7px 7px 0 papayawhip,
+    8px 8px 0 papayawhip,
+    9px 9px 0 papayawhip,
+    10px 10px 0 whitesmoke,
+    11px 11px 0 whitesmoke,
+    12px 12px 0 whitesmoke,
+    13px 13px 0 cadetblue,
+    14px 14px 0 cadetblue,
+    15px 15px 0 cadetblue;
+  left: 10%;
+  opacity: 1;
+  top: 50%;
+}
+
+.white-text {
+  color: white;
+}
