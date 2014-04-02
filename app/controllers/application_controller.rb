@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_filter :validate_viget_ip
+  # before_filter :validate_viget_ip
 
   private
 
