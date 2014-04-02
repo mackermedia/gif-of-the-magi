@@ -1,20 +1,11 @@
 class GifsController < ApplicationController
-  respond_to :html, :json
-
-  def new
-    @gif = Gif.new
-
-    respond_to do |format|
-      format.html
-      format.json { render :json => nil }
-    end
-  end
+  respond_to :json
 
   def create
     @gif = Gif.new(gif_params)
 
     if @gif.save
-      render :json => @gif, :status => 201, :content_type => "application/json"
+      render :json => @gif.url, :status => 201, :content_type => "application/json"
     else
       render :json => @gif.errors, :status => 422
     end
@@ -23,10 +14,7 @@ class GifsController < ApplicationController
   def index
     @gif = Gif.last
 
-    respond_to do |format|
-      format.html
-      format.json { render :json => @gif, :status => 200, :content_type => "application/json" }
-    end
+    render :json => @gif.url, :status => 200, :content_type => "application/json"
   end
 
   private
