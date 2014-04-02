@@ -7,6 +7,7 @@ body,
 blink {
 	height: 100%;
 	width: 100%;
+	overflow: hidden;
 }
 
 marquee,
@@ -23,16 +24,6 @@ blink {
 	transition:
 		opacity 0.3s ease-in-out,
 		-webkit-transform 0.3s ease-in-out,
-		-webkit-filter 0.3s ease-in-out;
-}
-
-body:hover blink {
-	-webkit-filter: blur(20px);
-	-webkit-transform: scale(1.6);
-	opacity: 0.45;
-	transition:
-		opacity 0.3s ease-in-out 0.2s,
-		-webkit-transform 0.3s ease-in-out 0.2s,
 		-webkit-filter 0.3s ease-in-out;
 }
 
@@ -56,7 +47,7 @@ marquee:focus {
 	outline: none;
 }
 
-body:hover marquee {
+marquee:hover, marquee:focus {
 	box-shadow:
 	  1px 1px 0 blanchedalmond,
 	  2px 2px 0 blanchedalmond,
