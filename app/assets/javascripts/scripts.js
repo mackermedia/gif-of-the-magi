@@ -18,6 +18,7 @@ try {
 
   window.setInterval(checkForNewGif, 5000);
 
+  setTheGif();
   checkForNewGif();
 
   /////////////////

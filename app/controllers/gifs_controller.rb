@@ -12,7 +12,7 @@ class GifsController < ApplicationController
   end
 
   def index
-    @gif = Gif.where(:channel_id => channel.id).order(:created_at => :desc).first
+    @gif = existing_gif || default_gif
 
     render :json => @gif.url, :status => 200, :content_type => "application/json"
   end
@@ -25,6 +25,14 @@ class GifsController < ApplicationController
 
   def channel
     @channel ||= Channel.find_by_name(params[:channel_token])
+  end
+
+  def existing_gif
+    Gif.where(:channel_id => channel.id).order(:created_at => :desc).first
+  end
+
+  def default_gif
+    Gif.new(:url => 'http://i.imgur.com/Npizs.gif')
   end
 
 end
